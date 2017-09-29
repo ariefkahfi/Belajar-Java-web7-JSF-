@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:body>
+
+    <h:form>
+        <h:selectOneRadio value="#{radioBean.gender}" >
+            <f:selectItem itemLabel="Male" itemValue="Male" />
+            <f:selectItem itemLabel="Female" itemValue="Female"/>
+        </h:selectOneRadio><br/>
+
+        <h:button action="#{controllerBean.resultPage()}"   value="Result Page"/>
+    </h:form>
+
+    <h:form>
+
+        <h:selectOneListbox value="#{radioBean.item}">
+            <f:selectItem  itemValue="Item 1"/>
+            <f:selectItem  itemValue="Item 2"/>
+            <f:selectItem  itemValue="Item 3"/>
+        </h:selectOneListbox><br/>
+        <h:commandButton action="#{controllerBean.resultPage()}" value="Result Page"/>
+    </h:form>
+
+    <h:form>
+        <h:selectManyListbox value="#{radioBean.arr}">
+            <f:selectItem itemValue="Many 1"/>
+            <f:selectItem itemValue="Many 2"/>
+            <f:selectItem itemValue="Many 3"/>
+        </h:selectManyListbox><br/>
+        <h:commandButton action="#{controllerBean.resultPage()}" value="Submit ManyListbox"/>
+    </h:form>
+
+</h:body>
+
+</html>
